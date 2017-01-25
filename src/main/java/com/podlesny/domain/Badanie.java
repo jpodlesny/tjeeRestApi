@@ -8,18 +8,21 @@ import javax.persistence.Id;
 
 @Entity
 public class Badanie {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private long id;
 	@Column(unique=true, nullable=false)
 	private String nazwa;
 	private String opis;
 	private String koszt;
 	
 	
-	public Long getId() {
+	public long getId() {
 		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
 	}
 	public String getNazwa() {
 		return nazwa;

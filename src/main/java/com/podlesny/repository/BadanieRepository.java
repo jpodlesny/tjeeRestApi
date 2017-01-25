@@ -42,9 +42,10 @@ public class BadanieRepository {
 	@SuppressWarnings("unchecked")
 	public List<Badanie> getAll() {
 		Query query = entityManager.createQuery("SELECT b FROM Badanie b");
-		List<Badanie> categories = query.getResultList();
-		return categories;
+		List<Badanie> badania = query.getResultList();
+		return badania;
 	}
+	
 
 	public Badanie getById(long id) {
 

@@ -34,8 +34,8 @@ public class GabinetRepository {
 	@SuppressWarnings("unchecked")
 	public List<Gabinet> getAll() {
 		Query query = entityManager.createQuery("SELECT g FROM Gabinet g");
-		List<Gabinet> websites = query.getResultList();
-		return websites;
+		List<Gabinet> gabinety = query.getResultList();
+		return gabinety;
 	}
 	
 	public Gabinet getById(long id) {
@@ -62,7 +62,7 @@ public class GabinetRepository {
 	}
 	
 	public boolean isExistGabinetWithLekarz(String lekarz) {
-		int result = Integer.parseInt(entityManager.createQuery("SELECT COUNT(w.id) FROM Gabinet g where g.lekarz=:lekarz")
+		int result = Integer.parseInt(entityManager.createQuery("SELECT COUNT(g.id) FROM Gabinet g where g.lekarz=:lekarz")
 				.setParameter("lekarz", lekarz).getResultList().get(0).toString());
 		if (result != 0)
 			return true;

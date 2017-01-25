@@ -12,7 +12,7 @@ public class Gabinet {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private long id;
 	@Column(nullable=false)
 	private String numer;
 	private String pietro;
@@ -22,11 +22,11 @@ public class Gabinet {
 	@ManyToOne
 	Badanie badanie;
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

@@ -81,7 +81,7 @@ public class BadanieResource {
 	
 	
 	@GET
-	@Path("/name/{nazwa}")
+	@Path("/nazwa/{nazwa}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Badanie viewByNazwa(
 			@PathParam("nazwa") String nazwa){
